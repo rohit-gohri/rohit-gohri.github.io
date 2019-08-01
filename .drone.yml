@@ -23,6 +23,8 @@ steps:
 - name: git_push
   image: appleboy/drone-git-push
   settings:
+    key:
+      from_secret: GIT_PUSH_SSH_KEY
     branch: master
     remote_name: origin
     commit: true
