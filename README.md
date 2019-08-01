@@ -6,5 +6,5 @@ Github Pages site
 
 ## Using
 
-- [gitfolio](https://github.com/imfunniee/gitfolio) by [@imfunniee](https://github.com/imfunniee)
-- [Drone CI](cloud.drone.io) for automatic weekly builds
+- [rohit-smpx/girfolio](https://github.com/rohit-smpx/gitfolio): A fork of [gitfolio](https://github.com/imfunniee/gitfolio) by [@imfunniee](https://github.com/imfunniee)
+- [Drone CI](cloud.drone.io): CI provider for automatic builds on push and weekly rebuilds (using [cron jobs](https://blog.drone.io/drone-1.1/)) to keep site updated
