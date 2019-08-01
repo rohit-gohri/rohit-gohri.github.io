@@ -20,7 +20,7 @@ steps:
     - yarn global add rohit-smpx/gitfolio
     - gitfolio update
   
-- name: git_push:
+- name: git_push
   image: appleboy/drone-git-push
   settings:
     branch: master
