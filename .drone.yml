@@ -35,4 +35,5 @@ steps:
 
 trigger:
   event: push
+  cron: [ weekly, hourly ]
 ...
