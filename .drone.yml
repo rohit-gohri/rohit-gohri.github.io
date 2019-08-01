@@ -26,8 +26,8 @@ steps:
     branch: master
     remote_name: origin
     commit: true
-    commit_message: [skip ci] update contents
-    author_name: Rohit (Drone User)
-    author_email: drone@boring.download
+    commit_message: "[skip ci] update contents"
+    author_name: "Rohit (Drone User)"
+    author_email: "drone@boring.download"
  
 ...
