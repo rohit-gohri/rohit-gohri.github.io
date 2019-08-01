@@ -24,6 +24,8 @@ steps:
   image: plugins/gh-pages
   settings:
     username: rohit-drone
+    user_name: drone
+    user_email: drone@boring.download
     password: 
       from_secret: github_token
     pages_directory: ./
