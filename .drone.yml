@@ -29,6 +29,7 @@ steps:
     pages_directory: ./
     target_branch: master
     pages_directory: ./
+    temporary_base: .tmp
 
 trigger:
   event: push
