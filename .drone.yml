@@ -21,16 +21,14 @@ steps:
     - gitfolio update
   
 - name: git_push
-  image: appleboy/drone-git-push
+  image: plugins/gh-pages
   settings:
-    key:
-      from_secret: GIT_PUSH_SSH_KEY
-    branch: master
-    remote_name: origin
-    commit: true
-    commit_message: "[skip ci] update contents"
-    author_name: "Rohit (Drone User)"
-    author_email: "drone@boring.download"
+    username: rohit-drone
+    password: 
+      from_secret: github_token
+    pages_directory: ./
+    target_branch: master
+    pages_directory: ./
 
 trigger:
   event: push
