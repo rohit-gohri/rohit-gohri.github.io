@@ -1,0 +1,31 @@
+kind: pipeline
+name: default
+
+workspace:
+  base: /src
+  path: gitfolio
+  
+clone: false
+  
+steps:
+- name: clone
+  image: docker:git
+  commands:
+  - git clone https://github.com/rohit-smpx/rohit-smpx.github.io .
+
+- name: build
+  image: smartprix/node:12
+  commands:
+  - yarn global add rohit-smpx/gitfolio
+  - gitfolio update
+  
+- name: git_push:
+  image: appleboy/drone-git-push
+  branch: master
+  remote_name: origin
+  commit: true
+  commit_message: [skip ci] update contents
+  author_name: Rohit (Drone User)
+  author_email: drone@boring.download
+ 
+...
