@@ -6,11 +6,12 @@
   "sort": "star",
   "order": "desc",
   "includeFork": true,
-  "theme": "dark.css",
+  "theme": "light.css",
   "types": [
    "all"
   ],
   "twitter": "rohit_gohri",
-  "linkedin": "rohit-gohri"
+  "linkedin": "rohit-gohri",
+  "background": "assets/bg.jpg"
  }
 ]
