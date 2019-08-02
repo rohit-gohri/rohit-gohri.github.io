@@ -32,10 +32,10 @@ steps:
     target_branch: master
     temporary_base: .tmp
 
-trigger:
-  cron:
-    - test
-    - test2
-    - test3
-    - weekly
+# trigger:
+#   cron:
+#     - test
+#     - test2
+#     - test3
+#     - weekly
 ...
