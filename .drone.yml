@@ -33,5 +33,9 @@ steps:
     temporary_base: .tmp
 
 trigger:
-  branch: drone
+  cron:
+    - test
+    - test2
+    - test3
+    - weekly
 ...
