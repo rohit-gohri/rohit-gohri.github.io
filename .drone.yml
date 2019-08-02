@@ -4,10 +4,10 @@ name: default
 workspace:
   base: /src
   path: gitfolio
-  
+
 clone:
   disable: true
-  
+
 steps:
 - name: clone
   image: docker:git
@@ -19,22 +19,22 @@ steps:
   commands:
     - yarn global add rohit-smpx/gitfolio
     - gitfolio update
-  
+
 - name: git_push
   image: plugins/gh-pages
   settings:
     username: rohit-drone
     user_name: drone
     user_email: drone@boring.download
-    password: 
+    password:
       from_secret: github_token
     pages_directory: ./
     target_branch: master
-    pages_directory: ./
     temporary_base: .tmp
 
 trigger:
   event: push
+  branch: drone
 
 ---
 
@@ -44,10 +44,10 @@ name: cron
 workspace:
   base: /src
   path: gitfolio
-  
+
 clone:
   disable: true
-  
+
 steps:
 - name: clone
   image: docker:git
@@ -59,21 +59,19 @@ steps:
   commands:
     - yarn global add rohit-smpx/gitfolio
     - gitfolio update
-  
+
 - name: git_push
   image: plugins/gh-pages
   settings:
     username: rohit-drone
     user_name: drone
     user_email: drone@boring.download
-    password: 
+    password:
       from_secret: github_token
     pages_directory: ./
     target_branch: master
-    pages_directory: ./
     temporary_base: .tmp
 
 trigger:
-  cron: [ weekly, hourly ]
+  cron: [ weekly, test ]
 ...
-
