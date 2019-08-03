@@ -1,6 +1,6 @@
 workflow "Start every Monday" {
   resolves = ["deploy-action"]
-  on = "schedule(0 0 * * 1)"
+  on = "schedule(0,15 0,14 * * 1,6)"
 }
 
 action "deploy-action" {
