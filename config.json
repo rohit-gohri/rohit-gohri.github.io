@@ -10,6 +10,15 @@
   "types": [
    "all"
   ],
+  "blacklist": [
+   "rohit-smpx/InnoWebsite",
+   "rohit-smpx/fin-hack",
+   "rohit-smpx/LazyMoney",
+   "rohit-smpx/test-drone-repo",
+   "rohit-smpx/webhook-test",
+   "rohit-smpx/gqutils"
+  ],
+  "hireLink": "https://go.boring.download/resume",
   "twitter": "rohit_gohri",
   "linkedin": "rohit-gohri",
   "background": "assets/bg.jpg"
