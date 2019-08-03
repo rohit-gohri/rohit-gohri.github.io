@@ -32,8 +32,8 @@ steps:
     target_branch: master
     temporary_base: .tmp
 
-# trigger:
-#   target:
-#     build
+trigger:
+  target:
+    build
   # Cron does not work on cloud.drone.io (https://discourse.drone.io/t/cron-on-cloud-drone-io/3899)
 ...
