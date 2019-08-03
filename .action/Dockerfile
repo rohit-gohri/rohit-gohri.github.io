@@ -9,20 +9,10 @@ LABEL "repository"="http://github.com/rohit-smpx/rohit-smpx.github.io"
 LABEL "homepage"="http://github.com/rohit-smpx/rohit-smpx.github.io"
 LABEL "maintainer"="Rohit Gohri <gohri.rohit@gmail.com>"
 
-# From https://stackoverflow.com/a/52092711/9485498
-# Create and define the node_modules's cache directory.
-RUN mkdir -p /usr/src/cache
-WORKDIR /usr/src/cache
-
-# Install the application's dependencies into the node_modules's cache directory.
-COPY package.json package-lock.json ./
+COPY package*.json ./
 RUN npm install
 
-# Create and define the application's working directory.
-RUN mkdir -p /github/workspace/
-WORKDIR /github/workspace/
+COPY . .
 
-COPY * ./
-
-RUN chmod +x /github/workspace/entrypoint.sh
-ENTRYPOINT ["/github/workspace/entrypoint.sh"]
+# Run `node /index.js`
+ENTRYPOINT ["node", "/script.js"]
