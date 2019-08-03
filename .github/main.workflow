@@ -1,5 +1,5 @@
 workflow "Build On Monday" {
-  resolves = ["deploy-action"]
+  resolves = ["deploy-drone-action"]
   on = "schedule(0 0 * * 1)"
 }
 
