@@ -19,10 +19,10 @@ COPY package.json package-lock.json ./
 RUN npm install
 
 # Create and define the application's working directory.
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+RUN mkdir -p /github/workspace/
+WORKDIR /github/workspace/
 
 COPY * ./
 
-RUN chmod +x /usr/src/app/entrypoint.sh
-ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
+RUN chmod +x /github/workspace/entrypoint.sh
+ENTRYPOINT ["/github/workspace/entrypoint.sh"]
