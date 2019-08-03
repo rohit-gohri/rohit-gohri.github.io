@@ -28,7 +28,7 @@ async function getBuild() {
 }
 
 async function promoteBuild(buildNumber) {
-    console.error('build', buildNumber);
+    console.log(`Promoting build ${buildNumber} to ${target}`);
     const response = await Connect.post(
         `${apiBase}/repos/${githubRepo}/builds/${buildNumber}/promote?target=${target}`
     ).bearerToken(apiToken);
@@ -42,7 +42,7 @@ async function main() {
 }
 
 main().then((newBld) => {
-    console.log(`Deploy triggered succesfully: ${newBld}`);
+    console.log(`Deploy triggered succesfully: ${apiHost}/${githubRepo}/${newBld}`);
 }).catch((err) => {
     console.error(`There was an error:\n`, err);
 });

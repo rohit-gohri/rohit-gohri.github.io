@@ -1,12 +1,13 @@
-workflow "Start every Monday" {
+workflow "Build On Monday" {
   resolves = ["deploy-action"]
-  on = "schedule(22,30 0,20 * * 1,6)"
+  on = "schedule(0 0 * * 1)"
 }
 
-action "deploy-action" {
+action "deploy-drone-action" {
   uses = "./.action"
   secrets = ["GITHUB_TOKEN", "DRONE_TOKEN"]
   env = {
     DEPLOY_ENV = "build"
+    DEPLOY_BUILD = "29"
   }
 }
