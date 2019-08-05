@@ -1,6 +1,6 @@
-workflow "Build On Monday" {
+workflow "Build Everyday" {
   resolves = ["deploy-drone-action"]
-  on = "schedule(0 0 * * 1)"
+  on = "schedule(30 5 * * *)"
 }
 
 action "deploy-drone-action" {
