@@ -5,7 +5,8 @@ const target = process.env.DEPLOY_TARGET || process.env.DEPLOY_ENV || 'productio
 const branch = process.env.DEPLOY_BRANCH || 'master';
 let build = process.env.DEPLOY_BUILD;
 
-const githubRepo = process.env.GITHUB_REPOSITORY; // Full repo name: owner/repo
+const githubRepo = process.env.GITHUB_REPOSITORY// Full repo name: owner/repo
+const githubUser = process.env.GITHUB_ACTOR;
 
 const apiHost = process.env.DRONE_SERVER || 'https://cloud.drone.io';
 const apiToken = process.env.DRONE_TOKEN;
@@ -19,10 +20,13 @@ async function getBuild() {
         `${apiBase}/repos/${githubRepo}/builds`
     );
     const builds = JSON.parse(response.body);
-    
+
     for (let i = 0; i < builds.length; i++ ) {
         const buildItem = builds[i];
-        if (buildItem.source === branch && buildItem.event === 'push') return buildItem.number;
+        if (buildItem.source === branch &&
+            buildItem.event === 'push' &&
+            buildItem.author_login === githubUser
+            ) return buildItem.number;
     }
     throw new Error(`No build matching branch, ${branch}, found.`);
 }
