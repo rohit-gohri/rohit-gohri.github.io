@@ -18,10 +18,12 @@
    "rohit-smpx/webhook-test",
    "rohit-smpx/gqutils"
   ],
+  "url": "https://rohit.boring.download/",
   "hireLink": "https://go.boring.download/resume-preview",
   "twitter": "rohit_gohri",
   "linkedin": "rohit-gohri",
   "background": "assets/bg.jpg",
-  "socialPreviewImg": "https://rohit.boring.download/assets/preview.png"
+  "socialPreviewImg": "https://rohit.boring.download/assets/preview.png",
+  "socialPreviewImgAlt": "A overview of the profile of the user"
  }
 ]
