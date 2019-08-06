@@ -8,6 +8,5 @@ action "deploy-drone-action" {
   secrets = ["GITHUB_TOKEN", "DRONE_TOKEN"]
   env = {
     DEPLOY_ENV = "build"
-    DEPLOY_BUILD = "35"
   }
 }
