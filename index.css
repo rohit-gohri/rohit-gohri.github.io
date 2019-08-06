@@ -83,6 +83,7 @@ body{
     border-radius:50%;
     width:90px;
     height:90px;
+    margin-right: 2vw;
     background-size:cover !important;
     background-repeat: no-repeat;
 }
@@ -274,6 +275,49 @@ body{
 #forks {
     margin:2vh 0px;
     padding:4vh 0px !important;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.collapsible-active {
+    margin-bottom: 3vh;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.collapsible-active, .collapsible:hover {
+    background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.collapsible-content {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+  
+.collapsible-active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 .projects {

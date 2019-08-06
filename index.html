@@ -5,12 +5,11 @@
     <title>Rohit Gohri (@rohit-smpx)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
     <link rel="stylesheet" href="index.css">
 <link rel="icon" href="https://avatars0.githubusercontent.com/u/31949290?v=4" type="image/png"><meta type="description" content="Software Developer | CS Graduate from NSIT, Delhi | NodeJS, Ansible, Typescript
-"><meta type="og:title" content="Rohit Gohri (@rohit-smpx)"><meta type="og:image" content="https://avatars0.githubusercontent.com/u/31949290?v=4"><meta type="og:description" content="Software Developer | CS Graduate from NSIT, Delhi | NodeJS, Ansible, Typescript
-"><meta type="profile:first_name" content="Rohit"><meta type="profile:last_name" content="Gohri"><meta type="profile:username" content="rohit-smpx"></head>
+"><meta type="og:title" content="Rohit Gohri (@rohit-smpx)"><meta type="og:image" content="assets/preview.png"><meta type="og:description" content="Software Developer | CS Graduate from NSIT, Delhi | NodeJS, Ansible, Typescript
+"><meta type="og:type" content="profile"><meta type="profile:first_name" content="Rohit"><meta type="profile:last_name" content="Gohri"><meta type="profile:username" content="rohit-smpx"></head>
 
 <body>
     <div id="loading">
@@ -18,23 +17,40 @@
     </div>
     <div id="profile">
         <div id="profile_img" style="background: url(https://avatars0.githubusercontent.com/u/31949290?v=4) center;"></div>
-        <div id="username"><span style="display:block;">Rohit Gohri</span><a href="https://github.com/rohit-smpx">@rohit-smpx</a></div>
+        <div id="username"><span style="display:block;">
+            Rohit Gohri
+        </span>
+        <a href="https://github.com/rohit-smpx">@rohit-smpx</a></div>
         <div id="userbio" style="display: block;">Software Developer | CS Graduate from NSIT, Delhi | NodeJS, Ansible, Typescript
 </div>
         <div id="about">
-                <span style="display:block;"><i class="fas fa-users"></i> &nbsp; @smartprix</span>
-                <span style="display:none;"><i class="fas fa-envelope"></i> &nbsp; null</span>
-                <span style="display:block;"><i class="fas fa-link"></i> &nbsp; <a href="https://rohit.boring.download">https://rohit.boring.download</a></span>
-                <span style="display:block;"><i class="fab fa-twitter-square"></i> &nbsp;&nbsp; <a href="https://www.twitter.com/rohit_gohri" target="_blank" class="socials"> Twitter</a></span>
-                <span style="display:block;"><i class="fab fa-linkedin"></i> &nbsp;&nbsp; <a href="https://www.linkedin.com/in/rohit-gohri/" target="_blank" class="socials"> LinkedIn</a></span>
-                <span style="display:none;"><i class="fab fa-medium"></i> &nbsp;&nbsp; <a href="https://www.medium.com/@undefined/" target="_blank" class="socials"> Medium</a></span>
-                <span style="display:block;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; Noida, India</span><span style="display:block;">
-                    <i class="fas fa-user-tie"></i>
-                        &nbsp;&nbsp;
-                        <a href="https://go.boring.download/resume-preview" target="_blank">
-                        Available for hire
-                        </a>
-                    </span></div>
+        <span style="display:block;">
+            <i class="fas fa-users"></i> &nbsp; @smartprix
+        </span>
+        <span style="display:none;">
+            <i class="fas fa-envelope"></i> &nbsp; null
+        </span>
+        <span style="display:block;">
+            <i class="fas fa-link"></i> &nbsp; <a href="https://rohit.boring.download">https://rohit.boring.download</a>
+        </span>
+        <span style="display:block;">
+            <i class="fab fa-twitter-square"></i> &nbsp;&nbsp; <a href="https://www.twitter.com/rohit_gohri" target="_blank" class="socials"> Twitter</a>
+        </span>
+        <span style="display:block;">
+            <i class="fab fa-linkedin"></i> &nbsp;&nbsp; <a href="https://www.linkedin.com/in/rohit-gohri/" target="_blank" class="socials"> LinkedIn</a>
+        </span>
+        <span style="display:none;">
+            <i class="fab fa-medium"></i> &nbsp;&nbsp; <a href="https://www.medium.com/@undefined/" target="_blank" class="socials"> Medium</a>
+        </span>
+        <span style="display:block;">
+            <i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; Noida, India
+        </span><span style="display:block;">
+            <i class="fas fa-user-tie"></i>
+            &nbsp;&nbsp;
+            <a href="https://go.boring.download/resume-preview" target="_blank">
+            Available for hire
+            </a>
+        </span></div>
     </div>
     <div id="display">
         <div id="work">
@@ -328,8 +344,10 @@
             </a></div>
         </div>
         <div id="forks" style="display: block;">
-            <h1>Forks.</h1>
-            <div class="projects" id="forks_section">
+            <button class="collapsible">
+                <h1>Forks.</h1>
+            </button>
+            <div class="projects collapsible-content" id="forks_section">
             <a href="https://github.com/rohit-smpx/gitfolio" target="_blank">
             <section>
                 <div class="section_title">gitfolio</div>
@@ -617,7 +635,7 @@
             </section>
             </a></div>
         </div>
-        <div id="blog_section">
+        <div id="blog_section" style="display: none;">
             <h1>Blog.</h1>
             <div id="blogs"></div>
         </div>
@@ -635,29 +653,6 @@
                 document.getElementById("loading").style.display = "none";
             }, 800);
         }, 1500);
-        $.getJSON("blog.json", function (blog) {
-            blog = blog || [];
-            if (blog.length == 0) {
-                return document.getElementById("blog_section").style.display = "none";
-            }
-            for (var i = 0; i < blog.length; i++) {
-                $("#blogs").append(`
-            <a href="./blog/${blog[i].url_title}/" target="_blank">
-                <section>
-                    <img src="${blog[i].top_image}">
-                    <div class="blog_container">
-                        <div class="section_title">${blog[i].title}</div>
-                        <div class="about_section">
-                            ${blog[i].sub_title}
-                        </div>
-                    </div>
-                </section>
-            </a>
-            `);
-            }
-        }).fail(function () {
-            return document.getElementById("blog_section").style.display = "none";
-        });
     </script>
 
     <script type="text/javascript">
@@ -669,7 +664,7 @@
     </script>
 
     <script>
-        const magicProjectsGrid = new MagicGrid({
+        var magicProjectsGrid = new MagicGrid({
           container: '#work_section',
           animate: false,
           gutter: 30, // default gutter size
@@ -679,7 +674,7 @@
           useTransform: true
         });
 
-        const magicForksGrid = new MagicGrid({
+        var magicForksGrid = new MagicGrid({
           container: '#forks_section',
           animate: false,
           gutter: 30, // default gutter size
@@ -689,10 +684,25 @@
           useTransform: true
         })
 
-        $('document').ready(() => {
-          magicProjectsGrid.listen();
-          magicForksGrid.listen();
-        });
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("collapsible-active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function(event) { 
+            magicProjectsGrid.listen();
+            magicForksGrid.listen();
+        }, false);
     </script>
 
 
