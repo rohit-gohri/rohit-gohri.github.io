@@ -21,6 +21,7 @@
   "hireLink": "https://go.boring.download/resume-preview",
   "twitter": "rohit_gohri",
   "linkedin": "rohit-gohri",
-  "background": "assets/bg.jpg"
+  "background": "assets/bg.jpg",
+  "socialPreviewImg": "assets/preview.png"
  }
 ]
