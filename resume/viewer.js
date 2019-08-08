@@ -13807,7 +13807,7 @@ function getDefaultPreferences() {
     defaultPreferences = Promise.resolve({
       "viewOnLoad": 0,
       "defaultZoomValue": "",
-      "sidebarViewOnLoad": -1,
+      "sidebarViewOnLoad": 0,
       "cursorToolOnLoad": 0,
       "enableWebGL": false,
       "eventBusDispatchToDOM": false,
