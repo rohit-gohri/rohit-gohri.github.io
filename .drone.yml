@@ -12,6 +12,15 @@ steps:
     - yarn global add rohit-smpx/gitfolio
     - gitfolio update
 
+- name: download
+  image: abihf/wget
+  commands:
+    - wget -O ./resume/RohitGohri.pdf https://go.boring.download/resume
+  when:
+    target:
+      - resume
+      - build
+
 - name: git_push
   image: plugins/gh-pages
   settings:
@@ -24,7 +33,9 @@ steps:
     target_branch: master
     temporary_base: .tmp
   when:
-    target: build
+    target:
+      - resume
+      - build
 
 trigger:
   target:
