@@ -1739,7 +1739,6 @@ var validateFileURL;
 
     try {
       var viewerOrigin = new _pdfjsLib.URL(window.location.href).origin || 'null';
-      console.log(viewerOrigin);
       if (HOSTED_VIEWER_ORIGINS.includes(viewerOrigin)) {
         return;
       }
