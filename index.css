@@ -167,7 +167,6 @@ body {
   font-size: 17px;
   line-height: 25px;
   word-spacing: 1.2px;
-  margin: 5vh 0px;
 }
 
 #blog p span {
@@ -287,8 +286,7 @@ body {
 }
 
 #forks {
-  margin: 2vh 0px;
-  padding: 4vh 0px !important;
+  margin: 1vh 0px;
 }
 
 /* Style the button that is used to open and close the collapsible content */
@@ -420,7 +418,7 @@ body {
 }
 
 #blogs {
-  columns: 2;
+  columns: 3;
 }
 
 #blog_title {
