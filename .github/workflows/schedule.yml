@@ -1,0 +1,15 @@
+on:
+  schedule:
+  - cron: 0 19 * * *
+name: Build Everyday
+jobs:
+  deploy-drone-action:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: deploy-drone-action
+      uses: ./.action
+      env:
+        DEPLOY_ENV: build
+        DRONE_TOKEN: ${{ secrets.DRONE_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
