@@ -9,7 +9,7 @@ steps:
 - name: build
   image: node:12
   commands:
-    - yarn global add rohit-smpx/gitfolio
+    - yarn global add rohit-gohri/gitfolio
     - gitfolio update
 
 - name: download
@@ -21,17 +21,19 @@ steps:
       - resume
       - build
 
-- name: git_push
-  image: plugins/gh-pages
-  settings:
-    username: rohit-drone
-    user_name: drone
-    user_email: drone@boring.download
-    password:
+
+- name: commit-and-push-pages
+  image: docker:git
+  environment:
+    GITHUB_TOKEN:
       from_secret: github_token
-    pages_directory: ./
-    target_branch: master
-    temporary_base: .tmp
+  commands:
+    - git config user.email "drone@boring.download"
+    - git config user.name "Drone User"
+    - git add --all
+    - git commit -m "Updating site, `date`"
+    - git remote add origin-pages https://$GITHUB_TOKEN@github.com/$DRONE_REPO.git > /dev/null 2>&1
+    - git push --set-upstream origin-pages master
   when:
     target:
       - resume
