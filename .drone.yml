@@ -9,7 +9,7 @@ steps:
 - name: build
   image: node:12
   commands:
-    - yarn global add rohit-smpx/gitfolio
+    - yarn global add rohit-gohri/gitfolio
     - gitfolio update
 
 - name: download
