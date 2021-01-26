@@ -11,5 +11,6 @@ jobs:
       uses: ./.action
       env:
         DEPLOY_ENV: build
+        DEPLOY_BRANCH: main
         DRONE_TOKEN: ${{ secrets.DRONE_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
